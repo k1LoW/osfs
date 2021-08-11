@@ -23,7 +23,7 @@ func New() *OSFS {
 
 func (fsys *OSFS) Open(name string) (fs.File, error) {
 	path := filepath.Join(fsys.root, name)
-	f, err := os.Open(path)
+	f, err := os.Open(filepath.Clean(path))
 	if err != nil {
 		return nil, err
 	}
