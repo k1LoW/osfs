@@ -5,7 +5,11 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest]
+        go_version: [1.16]
+    runs-on: ${{ matrix.platform }}
     steps:
       - name: Set up Go ${{ matrix.go_version }}
         uses: actions/setup-go@v2
