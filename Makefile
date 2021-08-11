@@ -21,7 +21,7 @@ prerelease:
 	go mod tidy
 	ghch -w -N ${VER}
 	gocredits . > CREDITS
-	git add CHANGELOG.md CREDITS go.mod go.sum
+	git add CHANGELOG.md CREDITS go.mod
 	git commit -m'Bump up version number'
 	git tag ${VER}
 
