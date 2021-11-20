@@ -1,6 +1,8 @@
+Use [os.DirFS](https://pkg.go.dev/os#DirFS)
+
 # osfs
 
-OS FileSystem ([fs.FS](https://pkg.go.dev/io/fs)) implementation
+`osfs` provides a OS FileSystem implementation for Go io/fs interface.
 
 ## Supported interface
 
